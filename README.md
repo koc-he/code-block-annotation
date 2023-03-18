@@ -25,11 +25,11 @@ In the `<head>` tag of your site, add this partial:
 You can set can annotate your codeblock with three parameters:
 - **`path`:** The path to the file containing the code of the block. This appears at the top of the code block. 
 - **`show_lang`:** Whether you'd like to show the language of the code.
-- **`comments`:** Any comments you would like to leave about the code block.
+- **`note`:** Any note you would like to leave about the code block.
 
 Here's an example of how you'd set these values:
 ````
-``` markdown {path="path/to/the/file.md" comments="This is an amazing file. You should try using it." show_lang=true}
+``` markdown {path="path/to/the/file.md" note="This is an amazing file. You should try using it." show_lang=true}
 
 
 # Sample Markdown File

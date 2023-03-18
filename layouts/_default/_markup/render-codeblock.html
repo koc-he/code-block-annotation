@@ -1,7 +1,7 @@
 <div class="codeblock-container">
   {{ $pathAttribute := (index .Attributes "path") }}
   {{ $showLangAttribute := (index .Attributes "show_lang") }}
-  {{ $commentsAttribute := (index .Attributes "comments") }}
+  {{ $noteAttribute := (index .Attributes "note") }}
 
   {{ with $pathAttribute }}
     <div class="codeblock-item">
@@ -16,9 +16,9 @@
     <span class="codeblock-label">Language: </span>{{ .Type }}
   </div>
   {{ end }}
-  {{ with $commentsAttribute }}
+  {{ with $noteAttribute }}
   <div class="codeblock-item">
-    <span class="codeblock-label">Comments: </span>{{ . }}
+    <span class="codeblock-label">Note: </span>{{ . }}
   </div>
   {{ end }}
 </div>
