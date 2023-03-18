@@ -38,7 +38,7 @@ Maecenas nibh sapien, venenatis sed gravida vel, rutrum ut felis. Orci varius na
 ```
 
 Here's a screenshot of the results.
-
+![Screenshot of annotated code](static/images/screenshot.png)
 
 ## Styling
 If you'd like to style the annotation, add a **`assets/styles/codeblock.scss`** file. 
