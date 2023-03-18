@@ -1,3 +1,3 @@
-module github.com/koc-he/hugo-codeblock-annotation v0.0.1
+module github.com/koc-he/hugo-codeblock-annotation
 
 go 1.19
