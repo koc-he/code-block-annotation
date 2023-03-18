@@ -1,20 +1,24 @@
 <div class="codeblock-container">
-  {{with (index .Attributes "path")}}
+  {{ $pathAttribute := (index .Attributes "path") }}
+  {{ $showLangAttribute := (index .Attributes "showLang") }}
+  {{ $commentsAttribute := (index .Attributes "comments") }}
+  {{ $bottomPresent := and $showLangAttribute (eq $commentsAttribute false) }}
+  {{ with $pathAttribute }}
     <div class="codeblock-item">
       <span class="codeblock-label">File Path: </span>{{ . }}
     </div>
-  {{end}}
-  <div>
-    {{highlight .Inner .Type .Options}}
+  {{ end }}
+  <div class="codeblock-body {{ if (eq $pathAttribute false) }} top-rounded {{ end }} {{ if not $bottomPresent }} bottom-rounded {{ end }}">
+    {{ highlight .Inner .Type .Options }}
   </div>
-  {{if (index .Attributes "showLang")}}
+  {{ if $showLangAttribute }}
   <div class="codeblock-item">
     <span class="codeblock-label">Language: </span>{{ .Type }}
   </div>
-  {{end}}
-  {{with (index .Attributes "comments")}}
+  {{ end }}
+  {{ with $commentsAttribute }}
   <div class="codeblock-item">
     <span class="codeblock-label">Comments: </span>{{ . }}
   </div>
-  {{end}}
+  {{ end }}
 </div>
