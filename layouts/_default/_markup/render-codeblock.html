@@ -11,7 +11,7 @@
   <div class="codeblock-body">
     {{ highlight .Inner .Type .Options }}
   </div>
-  {{ if $showLangAttribute }}
+  {{ if (eq $showLangAttribute "true") }}
   <div class="codeblock-item">
     <span class="codeblock-label">Language: </span>{{ .Type }}
   </div>
