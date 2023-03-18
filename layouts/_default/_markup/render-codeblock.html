@@ -2,13 +2,13 @@
   {{ $pathAttribute := (index .Attributes "path") }}
   {{ $showLangAttribute := (index .Attributes "showLang") }}
   {{ $commentsAttribute := (index .Attributes "comments") }}
-  {{ $bottomPresent := and $showLangAttribute (eq $commentsAttribute false) }}
+
   {{ with $pathAttribute }}
     <div class="codeblock-item">
       <span class="codeblock-label">File Path: </span>{{ . }}
     </div>
   {{ end }}
-  <div class="codeblock-body {{ if (eq $pathAttribute false) }} top-rounded {{ end }} {{ if not $bottomPresent }} bottom-rounded {{ end }}">
+  <div class="codeblock-body">
     {{ highlight .Inner .Type .Options }}
   </div>
   {{ if $showLangAttribute }}
