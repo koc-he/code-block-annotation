@@ -3,7 +3,6 @@
     color: #fff;
     border-radius: 10px;
     margin: 1em 0;
-    padding: .3em 0;
 }
 
 .codeblock-label {
@@ -16,7 +15,18 @@
 }
 
 .codeblock-item {
-    margin: 13px 10px;
+    $y-margin: 10px;
+    $y-margin-plus: calc(.2em + $y-margin);
+
+    margin: 13px $y-margin;
+
+    &:first-child {
+        margin-top: $y-margin-plus;
+    }
+
+    &:last-child {
+        margin-bottom: $y-margin-plus;
+    }
 }
 
 .codeblock-body {

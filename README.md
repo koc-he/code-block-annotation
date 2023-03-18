@@ -28,14 +28,19 @@ You can set can annotate your codeblock with three parameters:
 - **`comments`:** Any comments you would like to leave about the code block.
 
 Here's an example of how you'd set these values:
-```markdown {path="path/to/the/file.md" comments="This is an amazing file. You should try using it." show_lang=true}
+````
+``` markdown {path="path/to/the/file.md" comments="This is an amazing file. You should try using it." show_lang=true}
+
+
 # Sample Markdown File
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ipsum, id rhoncus nulla. 
 
 Nullam aliquam urna id auctor placerat. Suspendisse erat tortor, dapibus at lacus convallis, iaculis maximus dolor. 
 
 Maecenas nibh sapien, venenatis sed gravida vel, rutrum ut felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 ```
+````
 
 Here's a screenshot of the results.
 ![Screenshot of annotated code](static/images/screenshot.png)
