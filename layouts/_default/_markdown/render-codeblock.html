@@ -1,0 +1,20 @@
+<div class="codeblock-container">
+  {{- with (index .Attributes "path") -}}
+    <div class="codeblock-item">
+      <span class="codeblock-label">File Path: </span>{{ . }}
+    </div>
+  {{- end -}}
+  <div class="code-block">
+    {{- highlight .Inner .Type .Options -}}
+  </div>
+  {{- with .Type -}}
+  <div class="codeblock-item">
+    <span class="codeblock-label">Language: </span>{{ . }}
+  </div>
+  {{- end -}}
+  {{- with (index .Attributes "comments") -}}
+  <div class="codeblock-item">
+    <span class="codeblock-label">Comments: </span>{{ . }}
+  </div>
+  {{- end -}}
+</div>
