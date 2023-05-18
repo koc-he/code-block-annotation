@@ -4,6 +4,17 @@ title: "[Request] "
 labels: ["general request"]
 assignees: ["koc-he"]
 body:
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: What is this request related to?
+      options:
+        - Chore
+        - Documentation
+        - Performance
+        - Refactor
+        - Styling
+        - Tests
   - type: textarea
     id: description
     attributes:
@@ -16,14 +27,9 @@ body:
       label: Proposed Action
     validations:
       required: true
-  - type: dropdown
-    id: request-type
+  - type: textarea
+    id: additional-context
     attributes:
-      label: What is this request related to?
-      options:
-        - Chore
-        - Documentation
-        - Performance
-        - Refactor
-        - Styling
-        - Tests
+      label: Additional Context
+    validations:
+      required: true

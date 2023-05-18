@@ -10,17 +10,21 @@ body:
       label: Description
     validations:
       required: true
-
   - type: textarea
     id: proposed-solution
     attributes:
-      label: Proposed solution
+      label: Proposed Solution
     validations:
       required: true
-
   - type: textarea
     id: alternatives-considered
     attributes:
-      label: Alternatives considered
+      label: Alternatives Considered
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
     validations:
       required: true
