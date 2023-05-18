@@ -1,24 +1,40 @@
-<div class="codeblock-container">
-  {{ $pathAttribute := (index .Attributes "path") }}
-  {{ $showLangAttribute := (index .Attributes "show_lang") }}
-  {{ $noteAttribute := (index .Attributes "note") }}
+{{ $dark := index .Attributes "dark" }}
+{{ $name := index .Attributes "name" }}
+{{ $path := index .Attributes "path" }}
+{{ $showLang := index .Attributes "show_lang" }}
+{{ $note := index .Attributes "note" }}
 
-  {{ with $pathAttribute }}
+<div class="codeblock-container {{ if $dark }} codeblock-container-dark {{ else }} codeblock-container-light {{ end }}">
+  {{ with $name }}
     <div class="codeblock-item">
-      <span class="codeblock-label">File Path: </span>{{ . }}
+      {{ . }}
     </div>
   {{ end }}
   <div class="codeblock-body">
     {{ highlight .Inner .Type .Options }}
   </div>
-  {{ if $showLangAttribute }}
+  {{ with $path }}
+    <div class="codeblock-item">
+      <span class="codeblock-label">
+        {{ readFile "static/cba/icons/path.svg" | safeHTML }}
+      </span>
+      {{ . }}
+    </div>
+  {{ end }}
+  {{ if $showLang }}
   <div class="codeblock-item">
-    <span class="codeblock-label">Language: </span>{{ .Type }}
+    <span class="codeblock-label">
+      {{ readFile "static/cba/icons/language.svg" | safeHTML }}
+    </span>
+    {{ or (index site.Data.languages .Type) "text" }}
   </div>
   {{ end }}
-  {{ with $noteAttribute }}
+  {{ with $note }}
   <div class="codeblock-item">
-    <span class="codeblock-label">Note: </span>{{ . }}
+    <span class="codeblock-label">
+      {{ readFile "static/cba/icons/notes.svg" | safeHTML }}
+    </span>
+    {{ . }}
   </div>
   {{ end }}
 </div>

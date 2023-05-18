@@ -1,0 +1,3 @@
+{{ $options := (dict "targetPath" "cba.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+{{ $cbaStyle := resources.Get "cba/styles/codeblock.scss" | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $cbaStyle.Permalink | absURL }}" media="screen">
