@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}</title>
+    
+    {{ $options := (dict "targetPath" "styles.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+    {{ $styles := resources.Get "cba/styles/index.scss" | resources.ToCSS $options }}
+    <link rel="stylesheet" href="{{ $styles.Permalink | absURL }}" media="screen">
+
+    {{ partial "head/cba-styling.html" . }}
+  </head>
+  <body>
+    {{ block "main" . }}
+    {{ end }}
+    {{ block "footer" . }}
+    {{ end }}
+  </body>
+</html>
