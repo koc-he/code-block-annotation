@@ -1,4 +1,4 @@
-# Hugo Codeblock Annotation
+# Codeblock Annotation
 This module lets you add a file path, language, and comments to a Chroma codeblock on a Hugo site.
 
 ## Installation
@@ -17,7 +17,7 @@ In the `<head>` tag of your site, add this partial:
 ```html
 <head>
     <!-- Other things in your head tag --->
-    {{partial head/codeblock-styling.html}}
+    {{ partial "head/cba-styling.html" . }}
 </head>
 ```
 
