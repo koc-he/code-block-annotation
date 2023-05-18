@@ -1,0 +1,30 @@
+name: '✨ Feature Request'
+description: Suggest a feature
+title: "[Feature Request] "
+labels: ["feature request"]
+assignees: ["koc-he"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives-considered
+    attributes:
+      label: Alternatives Considered
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+    validations:
+      required: true

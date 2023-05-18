@@ -1,0 +1,35 @@
+name: '🔧 General Request'
+description: Make a general request
+title: "[Request] "
+labels: ["general request"]
+assignees: ["koc-he"]
+body:
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: What is this request related to?
+      options:
+        - Chore
+        - Documentation
+        - Performance
+        - Refactor
+        - Styling
+        - Tests
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-action
+    attributes:
+      label: Proposed Action
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+    validations:
+      required: true
