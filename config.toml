@@ -1,0 +1,11 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Code Block Annotation'
+description = 'Code block annotation module for Hugo.'
+
+[markup]
+   defaultMarkdownHandler = "goldmark"
+   
+   [markup.goldmark]
+      [markup.goldmark.renderer]
+         unsafe = true
