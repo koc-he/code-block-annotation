@@ -26,5 +26,3 @@ body:
     id: additional-context
     attributes:
       label: Additional Context
-    validations:
-      required: true
