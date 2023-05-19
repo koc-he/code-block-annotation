@@ -16,7 +16,6 @@ What kind of change does this PR introduce?
 - [ ] Refactoring (no functional changes, no api changes)
 - [ ] Documentation content changes
 - [ ] Performance
-- [ ] Chore
 - [ ] Testing
 - [ ] Styling
 - [ ] Other... Please describe:

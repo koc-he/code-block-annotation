@@ -13,10 +13,16 @@
 <br>
 <br>
 
-This module lets you add a file path, language, and comments to a Chroma codeblock on a Hugo site.
+This module lets you add a name, file path, language, and notes to a codeblock on a Hugo site.
+
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Styling](#styling)
 
 ## Installation
-Before you can begin, make sure that your Hugo site has been initialized as a module. 
+Before you can begin, make sure that your Hugo site has been [initialized as a module](https://gohugo.io/hugo-modules/use-modules/#initialize-a-new-module). 
 
 In your Hugo config, add this:
 ```toml {name="Hugo site config" path="config.toml" show_lang=true dark=true}
@@ -28,7 +34,7 @@ In your Hugo config, add this:
 Hugo will automatically download the module when you build or run your site. 
 
 In the `<head>` tag of your site, add this partial:
-```html  {name="Styling partial" path="layouts/_default/baseof.toml" show_lang=true dark=true}
+```html  {name="Styling partial in head tag" path="layouts/_default/baseof.toml" show_lang=true dark=true}
 <head>
     <!-- Other things in your head tag --->
     {{ partial "head/cba-styling.html" . }}
@@ -36,10 +42,11 @@ In the `<head>` tag of your site, add this partial:
 ```
 
 ## Usage
-You can set can annotate your codeblock with three parameters:
-- `path`: The path to the file containing the code of the block. This appears at the top of the code block. 
-- `show_lang`: Whether you'd like to show the language of the code.
-- `note`: Any note you would like to leave about the code block.
+You can set can annotate your codeblock with four optional parameters:
+- `name`: The name of the code block. This appears at the top of the code block. 
+- `path`: The path to the file containing the code of the block. This appears at the bottom of the code block. 
+- `show_lang`: Whether you'd like to show the language of the code. This appears at the bottom of the code block. 
+- `note`: Any note you would like to leave about the code block. This appears at the bottom of the code block. 
 
 Here's an example of how you'd set these values:
 ````text {name="Example annotated code block" dark=true show_lang=true}
@@ -59,11 +66,9 @@ Here's a screenshot of the results.
 <img alt="Screenshot of annotated code" id="readme-screenshot" src="/static/cba/images/sample.png"/>
 
 ## Styling
-If you'd like to style the annotation, add a `assets/styles/codeblock.scss` file. 
-
-These are the classes you can modify:
-| Sass Class | Purpose |
+If you'd like to style the annotation, use these CSS classes. 
+| Class | Purpose |
 | ----- | ----- |
 | `.codeblock-container` | The container of the whole block. |
-| `.codeblock-label` | The labels like `File Path`, `Language`, and `Comments`. |
-| `.codeblock-item` | The container that holds a label and annotation. |
+| `.codeblock-label` | The icons. |
+| `.codeblock-item` | The container that holds the icon and annotation. |
