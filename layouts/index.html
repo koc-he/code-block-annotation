@@ -1,10 +1,36 @@
 {{ define "title" }}
-  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 
 {{ define "main" }}
-  <article>
-    <h2>{{ .Title }}</h2>
+<div id="hero">
+  <div id="hero-label">
+    Hugo Module
+  </div>
+  <h1 id="hero-text">
+    Code Block Annotation
+  </h1>
+  <p id="hero-description">
+    Enhance your content posts by adding annotations and comments directly within code blocks. This module provides a
+    seamless and intuitive way to annotate code blocks with names, file paths, language types, and additional notes.
+    With it, you can easily add descriptive comments and explanations to provide valuable context and guidance to your
+    readers. The CBA module improves code documentation on Hugo sites by offering a convenient and structured way to add
+    contextual information to code blocks.
+  </p>
+  <div id="hero-content">
     {{ .Content }}
-  </article>
+
+    {{ range .Params.examples }}
+    <div class="cba-example-title">
+      {{ .title }} 
+      {{ range .tags }}
+      <span class="cba-example-label">{{.}}</span>
+      {{ end }}
+    </div>
+    <div class="cba-example">
+      {{ .body | markdownify }}
+    </div>
+    {{ end }}
+  </div>
+</div>
 {{ end }}

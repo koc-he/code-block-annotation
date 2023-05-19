@@ -1,7 +1,7 @@
 name: '🔧 General Request'
 description: Make a general request
 title: "[Request] "
-labels: ["general request"]
+labels: ["enhancements"]
 assignees: ["koc-he"]
 body:
   - type: dropdown
@@ -31,5 +31,3 @@ body:
     id: additional-context
     attributes:
       label: Additional Context
-    validations:
-      required: true

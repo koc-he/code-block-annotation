@@ -6,16 +6,34 @@
       {{ .Site.Title }}
     {{ end }}</title>
     
+    <link rel="icon" type="image/x-icon" href="/cba/favicon.png">
+
     {{ $options := (dict "targetPath" "styles.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
     {{ $styles := resources.Get "cba/styles/index.scss" | resources.ToCSS $options }}
     <link rel="stylesheet" href="{{ $styles.Permalink | absURL }}" media="screen">
 
+    {{ block "head" . }}
+    {{ end }}
+
     {{ partial "head/cba-styling.html" . }}
   </head>
   <body>
+    <div id="header">
+      <a href="/" aria-label="home">
+        <img id="header-logo" src="/cba/annotate.svg" aria-label="code block annotation logo" />
+      </a>
+      <div id="header-links">
+        <a href="/" aria-label="home">Home</a>
+        <a href="/documentation" aria-label="home">Documentation</a>
+        <a href="https://github.com/koc-he/code-block-annotation" aria-label="home">Github</a>
+      </div>
+    </div>
     {{ block "main" . }}
     {{ end }}
     {{ block "footer" . }}
     {{ end }}
+    <p class="copyright">
+      Copyright © {{ time.Format "2006" now }} koc-he. All rights reserved.
+    </p>
   </body>
 </html>
