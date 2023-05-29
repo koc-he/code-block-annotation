@@ -1,7 +1,11 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Code Block Annotation'
-description = 'Code block annotation module for Hugo.'
+disableKinds = ['taxonomy','taxonomyTerm']
+
+[params]
+   images = ['/cba/annotation_share.png']
+   description = 'Code block annotation module for Hugo sites.'
 
 [markup]
    defaultMarkdownHandler = "goldmark"

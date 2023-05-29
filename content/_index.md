@@ -57,34 +57,37 @@ examples:
         ```
 ---
 
+<h1 align="center">Features</h1>
+<div id="features-section">
 <div class="section">
-<p class="section-subtitle">Name</p>
-<p class="section-title">Put a Name to it</p>
+<img src="/cba/icons/name.svg" class="section-icon" />
+<p class="section-title">Name</p>
 <p class="section-description">
-Naming a code block to enhance readability and understanding of the code. A clear and concise name makes the code easier to comprehend for your readers. Named code blocks are easy to identify identification and remember.
+Add a name to your code block to enhance readability and understanding of the code.
 </p>
 </div>
 
 <div class="section">
-<p class="section-subtitle">Path</p>
-<p class="section-title">Identify a Path</p>
+<img src="/cba/icons/path.svg" class="section-icon" />
+<p class="section-title">Path</p>
 <p class="section-description">
-Showing a path for a code block provides context and make navigating to it easy. Readers can easily locate and understand where a code block fits in the overall codebase. Listing a path for a code block helps readers pinpoint specific issues when troubleshooting and debugging as they follow a tutorial. 
+Show a path for a code block to provide context and make navigating to it easy.
 </p>
 </div>
 
 <div class="section">
-<p class="section-subtitle">Language</p>
-<p class="section-title">List the Language</p>
+<img src="/cba/icons/language.svg" class="section-icon" />
+<p class="section-title">Language</p>
 <p class="section-description">
-Labelling a code block with a language type is crucial when writing a tutorial for new readers. It provides clear guidance on the programming language being used, ensuring that readers can follow along and understand the code examples. Indicating the language type enhances the learning experience for new readers, making your tutorial more accessible and actionable. 
+Label a code block with a language type to provide clear guidance on the programming language being used. 
 </p>
 </div>
 
 <div class="section">
-<p class="section-subtitle">Notes</p>
-<p class="section-title">Leave a Note</p>
+<img src="/cba/icons/notes.svg" class="section-icon" />
+<p class="section-title">Note</p>
 <p class="section-description">
-Leaving a note for a code block is essential for providing additional explanations and clarifications. It helps readers understand the purpose, behavior, or any important considerations related to the code block. You can guide readers through the tutorial, address potential questions or concerns in advance, and ensure they have a better grasp of the concepts being described.
+Leave a note to provide additional explanations and clarifications as well as address potential questions or concerns in advance.
 </p>
+</div>
 </div>
